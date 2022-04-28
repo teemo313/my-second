@@ -2,14 +2,14 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react";
 const API_KEY = "fe70023ec53e73de5f4f566c124b89bd";
-export default function Home() {
+export default function Popular() {
   const router = useRouter();
   const [movies, setMovies] = useState();
   useEffect(() => {
     (async () => {
       const { results } = await (
         await fetch(
-          `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
         )
       ).json();
       setMovies(results);
