@@ -22,7 +22,7 @@ export default function Latest() {
               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
               
               <div className="overlay"></div>
-              <div className="button"><a href="https://www.naver.com"> 예매 하기 </a></div>
+              <div className="button"><a href={`https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=${movie.original_title}`}> 영화 정보 </a></div>
               <h4>{movie.original_title}</h4>
             </div> ))}
             

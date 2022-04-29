@@ -16,6 +16,7 @@ export default function App({Component, pageProps}) {
             <Link href="/now">
                 <a id="maina">현재 상영작</a>
             </Link>
+            <hr />
             <Component {...pageProps} />
             <style jsx global>{`
             h1 {
